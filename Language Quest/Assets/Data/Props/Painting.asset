@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccab16d8775ef29438d7a73846d88e75, type: 3}
   m_Name: Painting
   m_EditorClassIdentifier: 
-  unlocked: 0
+  unlocked: 1

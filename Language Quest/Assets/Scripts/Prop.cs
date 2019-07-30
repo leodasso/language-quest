@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
+public interface ITouchable
+{
+    void OnHovered();
+
+    void OnUnhovered();
+}
+
 public class Prop : MonoBehaviour
 {
     [AssetsOnly]
