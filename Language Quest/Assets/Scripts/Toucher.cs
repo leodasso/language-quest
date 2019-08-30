@@ -25,6 +25,24 @@ public class Toucher : MonoBehaviour
         if (Input.GetMouseButtonUp(0)) OnMouseUp();
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // Check for a touchable
+        Touchable touchable = other.GetComponent<Touchable>();
+        if (!touchable) return;
+        
+        touchable.OnHoverEnter();
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        // Check for a touchable
+        Touchable touchable = other.GetComponent<Touchable>();
+        if (!touchable) return;
+        
+        touchable.OnHoverExit();
+    }
+
     void OnMouseDown()
     {
         spriteRenderer.color = pressedColor;
